@@ -1,49 +1,25 @@
 {
-  "name": "certnet",
-  "version": "0.0.1",
-  "description": "Certification Network",
+  "name": "regnet",
+  "version": "1.0.0",
+  "description": "Property Registration Chaincode",
   "main": "index.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
     "test": "nyc mocha test --recursive",
-    "start-dev": "fabric-chaincode-node start --peer.address peer0.iit.certification-network.com:7053 --chaincode-id-name certnet:1.1",
-    "start": "fabric-chaincode-node start",
-    "mocha": "mocha test --recursive"
+    "start": "fabric-chaincode-node start"
   },
-  "engineStrict": true,
-  "author": "Aakash Bansal",
+  "author": "Aakash Bansal <connect@aakashbansal.com> (https://www.aakashbansal.com)",
+  "license": "ISC",
   "dependencies": {
-    "fabric-contract-api": "~1.4.2",
-    "fabric-shim": "~1.4.2"
+    "fabric-contract-api": "^2.2.3",
+    "fabric-shim": "^2.2.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "eslint": "^8.18.0",
+    "nyc": "^15.1.0",
+    "mocha": "^10.0.0",
+    "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^4.19.1",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "sinon": "^6.0.0",
-    "sinon-chai": "^3.2.0"
-  },
-  "nyc": {
-    "exclude": [
-      "coverage/**",
-      "test/**"
-    ],
-    "reporter": [
-      "text-summary",
-      "html"
-    ],
-    "all": true,
-    "check-coverage": true,
-    "statements": 100,
-    "branches": 100,
-    "functions": 100,
-    "lines": 100
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0"
   }
 }
